@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOYNEXX — Where Legends Become Collectibles</title>
+<meta name="description" content="Premium anime and superhero collectible figures. Limited editions, certified authenticity, cinematic collecting.">
+<meta property="og:title" content="TOYNEXX — Where Legends Become Collectibles">
+<meta property="og:description" content="Premium anime and superhero collectible figures. Limited editions, certified authenticity.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= PRELOADER ================= -->
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">TOYNEXX</div>
+  <div class="preloader-bar"><span></span></div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="#home" class="nav-logo">TOY<span>NEXX</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#categories" class="nav-link">Categories</a>
+      <a href="#shop" class="nav-link">Shop</a>
+      <a href="#trending" class="nav-link">Limited Drops</a>
+      <a href="#about" class="nav-link">About</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="icon-btn" id="accountBtn" aria-label="Account">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+      </button>
+      <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.3C0.4 8.5 2 5 5.6 5c2 0 3.4 1 4.4 2.4C11 6 12.4 5 14.4 5 18 5 19.6 8.5 18 11.7 15.5 16.4 12 21 12 21z"/></svg>
+        <span class="badge" id="wishlistBadge">0</span>
+      </button>
+      <button class="icon-btn cart-trigger" id="cartBtn" aria-label="Cart">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16l-1.5 10.5a2 2 0 0 1-2 1.5H7.5a2 2 0 0 1-2-1.5L4 6z"/><path d="M8 6V5a4 4 0 0 1 8 0v1"/></svg>
+        <span class="badge" id="cartBadge">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= SEARCH OVERLAY ================= -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-panel">
+    <div class="search-input-row">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="searchInput" placeholder="Search figures, series, brand..." autocomplete="off">
+      <button id="searchClose" aria-label="Close search">&times;</button>
+    </div>
+    <div class="search-filters">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="Superhero Icons">Superhero</button>
+      <button class="chip" data-filter="Anime Legends">Anime</button>
+      <button class="chip" data-filter="Mecha Series">Mecha</button>
+      <button class="chip" data-filter="Limited Edition">Limited</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<!-- ================= STAR-BG ================= -->
+ 
+<div class="stars" id="stars"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+
+<video
+class="hero-video"
+autoplay
+muted
+loop
+playsinline
+preload="auto">
+
+<source src="BG vdo/bg.mp4" type="video/mp4">
+
+</video>
+
+  <div class="hero-bg">
+    <div class="hero-glow"></div>
+    <div class="hero-grid"></div>
+  </div>
+
+  <div class="hero-figures" id="heroFigures" style="display:none;">
+    <!-- figures injected/positioned via CSS, SVGs inline below -->
+    <div class="fig fig-tl float-a" id="figTL"></div>
+    <div class="fig fig-tr float-b" id="figTR"></div>
+    <div class="fig fig-l1 float-c" id="figL1"></div>
+    <div class="fig fig-l2 float-a" id="figL2"></div>
+    <div class="fig fig-r1 float-b" id="figR1"></div>
+    <div class="fig fig-r2 float-c" id="figR2"></div>
+  </div>
+
+  <div class="hero-content">
+    <span class="hero-eyebrow">Certified Collector's Circle</span>
+    <h1 class="hero-title">TOY<span>NEXX</span></h1>
+    <p class="hero-tagline">Where Legends Become Collectibles</p>
+    <div class="hero-cta">
+      <a href="#shop" class="btn btn-primary">Shop Collection</a>
+      <a href="#trending" class="btn btn-ghost">Explore Limited Drops</a>
+    </div>
+  </div>
+
+  <div class="hero-shelf" id="heroShelf">
+    <div class="shelf-glass">
+      <span class="shelf-label">Premium Display Case</span>
+      <div class="shelf-row">
+        <div class="shelf-item float-c"><div class="pc-figure shelf-fig"></div></div>
+        <div class="shelf-item float-a"><div class="pc-figure shelf-fig"></div></div>
+        <div class="shelf-item float-b"><div class="pc-figure shelf-fig"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span></span>
+    <p>Scroll</p>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>CERTIFIED AUTHENTICITY</span><span>&#9670;</span>
+    <span>WORLDWIDE SHIPPING</span><span>&#9670;</span>
+    <span>LIMITED NUMBERED EDITIONS</span><span>&#9670;</span>
+    <span>MUSEUM GRADE PACKAGING</span><span>&#9670;</span>
+    <span>CERTIFIED AUTHENTICITY</span><span>&#9670;</span>
+    <span>WORLDWIDE SHIPPING</span><span>&#9670;</span>
+    <span>LIMITED NUMBERED EDITIONS</span><span>&#9670;</span>
+    <span>MUSEUM GRADE PACKAGING</span><span>&#9670;</span>
+  </div>
+</div>
+
+<!-- ================= INFINITE CATEGORY STRIP ================= -->
+<section class="cat-strip-wrap" aria-label="Browse categories">
+  <div class="cat-strip" id="catStrip">
+    <div class="cat-strip-track" id="catStripTrack"></div>
+  </div>
+</section>
+
+<!-- ================= NEW ARRIVAL BANNER ================= -->
+<a href="#shop" class="new-arrival-banner reveal" id="newArrivalBanner">
+  <span class="na-badge">New</span>
+  <span class="na-text">Fresh Casts Just Landed — Explore the Latest Arrivals</span>
+  <span class="na-arrow">&rarr;</span>
+</a>
+
+<!-- ================= CATEGORIES ================= -->
+<section class="categories" id="categories">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">Browse The Vault</span>
+    <h2 class="section-title">Shop By Universe</h2>
+  </div>
+  <div class="category-grid" id="categoryGrid"></div>
+</section>
+
+<!-- ================= FEATURED PRODUCTS ================= -->
+<section class="shop" id="shop">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">The Collection</span>
+    <h2 class="section-title">Featured Figures</h2>
+  </div>
+
+  <div class="shop-filters reveal">
+    <div class="filter-pills">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="Superhero Icons">Superhero Icons</button>
+      <button class="filter-pill" data-filter="Anime Legends">Anime Legends</button>
+      <button class="filter-pill" data-filter="Mecha Series">Mecha Series</button>
+      <button class="filter-pill" data-filter="Limited Edition">Limited Edition</button>
+    </div>
+    <select class="sort-select" id="sortSelect" aria-label="Sort products">
+      <option value="newest">Newest First</option>
+      <option value="price-asc">Price: Low to High</option>
+      <option value="price-desc">Price: High to Low</option>
+      <option value="rating">Top Rated</option>
+      <option value="popular">Most Popular</option>
+    </select>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<!-- ================= TRENDING / LIMITED DROP BANNER ================= -->
+<section class="trending" id="trending">
+  <div class="trending-inner reveal">
+    <div class="trending-text">
+      <span class="section-eyebrow light">Drop Ends Soon</span>
+      <h2 class="trending-title">The Midnight<br>Vault Edition</h2>
+      <p class="trending-desc">500 numbered pieces. Once the vault closes, this cast is retired forever. No reissues. No restocks.</p>
+      <div class="countdown" id="countdown">
+        <div class="cd-block"><span id="cdH">00</span><small>Hours</small></div>
+        <div class="cd-block"><span id="cdM">00</span><small>Mins</small></div>
+        <div class="cd-block"><span id="cdS">00</span><small>Secs</small></div>
+      </div>
+      <a href="#shop" class="btn btn-primary">Claim Yours</a>
+    </div>
+    <div class="trending-visual">
+      <div class="fig fig-trending float-a"></div>
+      <div class="trending-ring"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="collectors reveal" id="about">
+  <div class="section-head">
+    <span class="section-eyebrow">Collector Voices</span>
+    <h2 class="section-title">Trusted By The Community</h2>
+  </div>
+  <div class="collectors-grid">
+    <div class="collector-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Packaging alone felt like unboxing a museum piece. The edition certificate sealed the deal."</p>
+      <span>— R. Kapoor, Mumbai</span>
+    </div>
+    <div class="collector-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"Fastest restock alerts of any store I follow. Got my numbered piece within seconds of drop."</p>
+      <span>— A. Fernandes, Goa</span>
+    </div>
+    <div class="collector-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"The tilt and detail on the sculpts is next level. This is a real collector's shelf brand."</p>
+      <span>— S. Rathi, Delhi</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+<section class="newsletter">
+  <div class="newsletter-inner reveal">
+    <h2>Get First Access To New Drops</h2>
+    <p>Join the Collector's Circle for early access, restock alerts, and vault-only pricing.</p>
+    <form id="newsletterForm" class="newsletter-form">
+      <input type="email" required placeholder="Enter your email address">
+      <button type="submit" class="btn btn-primary">Join</button>
+    </form>
+    <p class="newsletter-note" id="newsletterNote"></p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo">TOY<span>NEXX</span></a>
+      <p>Premium numbered collectibles for people who take their shelf seriously.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#shop">All Figures</a>
+      <a href="#categories">Categories</a>
+      <a href="#trending">Limited Drops</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#">Shipping &amp; Returns</a>
+      <a href="#">Track Order</a>
+      <a href="#">Contact Us</a>
+      <a href="#">FAQs</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#about">About</a>
+      <a href="#">Authenticity Promise</a>
+      <a href="#">Careers</a>
+      <a href="#" id="adminLink">Admin Panel</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> TOYNEXX. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= CART DRAWER ================= -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="drawer-head">
+    <h3>Your Cart</h3>
+    <button class="drawer-close" id="cartClose" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-empty" id="cartEmpty">
+    <p>Your cart is empty.</p>
+    <button class="btn btn-ghost" id="cartEmptyShop">Browse Figures</button>
+  </div>
+  <div class="cart-footer" id="cartFooter">
+    <div class="cart-row"><span>Subtotal</span><span id="cartSubtotal">₹0</span></div>
+    <div class="cart-row muted"><span>Shipping</span><span>Calculated at checkout</span></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+
+<!-- ================= WISHLIST DRAWER ================= -->
+<aside class="cart-drawer wishlist-drawer" id="wishlistDrawer" aria-label="Wishlist">
+  <div class="drawer-head">
+    <h3>Wishlist</h3>
+    <button class="drawer-close" id="wishlistClose" aria-label="Close wishlist">&times;</button>
+  </div>
+  <div class="cart-items" id="wishlistItems"></div>
+  <div class="cart-empty" id="wishlistEmpty">
+    <p>Your wishlist is empty.</p>
+    <button class="btn btn-ghost" id="wishlistEmptyShop">Browse Figures</button>
+  </div>
+</aside>
+
+<!-- ================= QUICK VIEW MODAL ================= -->
+<div class="modal-overlay" id="quickViewOverlay">
+  <div class="modal quickview-modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="quickViewClose" aria-label="Close">&times;</button>
+    <div class="qv-gallery">
+
+      <div class="qv-image-container">
+
+     <button class="qv-nav qv-prev">&#10094;</button>
+
+     <div class="qv-image" id="qvImage"></div>
+
+     <button class="qv-nav qv-next">&#10095;</button>
+
+     </div>
+
+      <div class="qv-thumbnails" id="qvThumbs"></div>
+
+      <div class="qv-edition" id="qvEdition"></div>
+
+    </div>
+    <div class="qv-info">
+      <span class="qv-category" id="qvCategory"></span>
+      <h3 id="qvName"></h3>
+      <div class="qv-price" id="qvPrice"></div>
+      <p class="qv-desc" id="qvDesc"></p>
+      <div class="qty-selector">
+        <button id="qvQtyMinus">&minus;</button>
+        <span id="qvQty">1</span>
+        <button id="qvQtyPlus">+</button>
+      </div>
+      <div class="qv-actions">
+        <button class="btn btn-primary" id="qvAddToCart">Add To Cart</button>
+        <button class="btn btn-ghost" id="qvWishlist">Add To Wishlist</button>
+      </div>
+      <button class="btn-link" id="qvBuyNow">Buy Now &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= LOGIN / REGISTER MODAL ================= -->
+<div class="modal-overlay" id="authOverlay">
+  <div class="modal auth-modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="authClose" aria-label="Close">&times;</button>
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="login">Login</button>
+      <button class="auth-tab" data-tab="register">Register</button>
+    </div>
+    <form class="auth-form active" id="loginForm">
+      <label>Email<input type="email" required></label>
+      <label>Password<input type="password" required minlength="6"></label>
+      <a href="#" class="forgot-link" id="forgotLink">Forgot password?</a>
+      <button type="submit" class="btn btn-primary btn-block">Log In</button>
+      <p class="auth-note">Demo mode — no data leaves your browser.</p>
+    </form>
+    <form class="auth-form" id="registerForm">
+      <label>Full Name<input type="text" required></label>
+      <label>Email<input type="email" required></label>
+      <label>Password<input type="password" required minlength="6"></label>
+      <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+      <p class="auth-note">Demo mode — no data leaves your browser.</p>
+    </form>
+  </div>
+</div>
+
+<!-- ================= ACCOUNT DASHBOARD MODAL ================= -->
+<div class="modal-overlay" id="dashboardOverlay">
+  <div class="modal dashboard-modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="dashboardClose" aria-label="Close">&times;</button>
+    <div class="dash-layout">
+      <div class="dash-side">
+        <div class="dash-profile"><div class="dash-avatar">C</div><div><b id="dashName">Collector</b><span>Member since 2026</span></div></div>
+        <button class="dash-tab active" data-dtab="orders">My Orders</button>
+        <button class="dash-tab" data-dtab="profile">My Profile</button>
+        <button class="dash-tab" data-dtab="wishlist">Wishlist</button>
+        <button class="dash-tab logout" id="logoutBtn">Log Out</button>
+      </div>
+      <div class="dash-main">
+        <div class="dash-panel active" id="dashOrders">
+          <h4>My Orders</h4>
+          <div id="orderHistoryList" class="order-history"></div>
+        </div>
+        <div class="dash-panel" id="dashProfile">
+          <h4>My Profile</h4>
+          <div class="form-grid">
+            <label>Full Name<input type="text" value="Collector"></label>
+            <label>Email<input type="email" value="collector@example.com"></label>
+            <label>Phone<input type="tel" placeholder="+91"></label>
+            <label>City<input type="text" placeholder="City"></label>
+          </div>
+          <button class="btn btn-primary">Save Changes</button>
+        </div>
+        <div class="dash-panel" id="dashWishlist">
+          <h4>Wishlist</h4>
+          <div id="dashWishlistList" class="order-history"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ADMIN PANEL ================= -->
+<div class="admin-overlay" id="adminOverlay">
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <div class="admin-brand">TOY<span>NEXX</span><small>Admin</small></div>
+      <button class="admin-nav-btn active" data-apanel="dashboard">&#128202; Dashboard</button>
+      <button class="admin-nav-btn" data-apanel="products">&#128230; Products</button>
+      <button class="admin-nav-btn" data-apanel="orders">&#128722; Orders</button>
+      <button class="admin-nav-btn" data-apanel="users">&#128101; Users</button>
+      <button class="admin-nav-btn back" id="adminBack">&larr; Back to Store</button>
+    </aside>
+    <main class="admin-main">
+      <div class="admin-panel active" id="apanel-dashboard">
+        <h2>Dashboard</h2>
+        <div class="admin-stats">
+          <div class="stat-card"><span id="statRevenue">₹0</span><small>Total Revenue</small></div>
+          <div class="stat-card"><span id="statOrders">0</span><small>Orders</small></div>
+          <div class="stat-card"><span id="statProducts">0</span><small>Products</small></div>
+          <div class="stat-card"><span id="statUsers">1,204</span><small>Registered Users</small></div>
+        </div>
+      </div>
+      <div class="admin-panel" id="apanel-products">
+        <div class="admin-panel-head"><h2>Products</h2><button class="btn btn-primary" id="adminAddProduct">+ Add Product</button></div>
+        <div class="admin-table-wrap"><table class="admin-table" id="adminProductTable"><thead><tr><th>Name</th><th>Category</th><th>Price</th><th>Edition</th><th></th></tr></thead><tbody id="adminProductBody"></tbody></table></div>
+      </div>
+      <div class="admin-panel" id="apanel-orders">
+        <h2>Orders</h2>
+        <div class="admin-table-wrap"><table class="admin-table" id="adminOrderTable"><thead><tr><th>Order ID</th><th>Items</th><th>Total</th><th>Status</th></tr></thead><tbody id="adminOrderBody"></tbody></table></div>
+      </div>
+      <div class="admin-panel" id="apanel-users">
+        <h2>Users</h2>
+        <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Name</th><th>Email</th><th>Orders</th><th>Joined</th></tr></thead><tbody>
+          <tr><td>R. Kapoor</td><td>r.kapoor@example.com</td><td>4</td><td>Jan 2026</td></tr>
+          <tr><td>A. Fernandes</td><td>a.fernandes@example.com</td><td>2</td><td>Mar 2026</td></tr>
+          <tr><td>S. Rathi</td><td>s.rathi@example.com</td><td>7</td><td>Nov 2025</td></tr>
+        </tbody></table></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- ================= TOAST ================= -->
+<div class="toast" id="toast"></div>
+
+<!-- ================= FLY TO CART GHOST ================= -->
+<div class="fly-ghost" id="flyGhost"></div>
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

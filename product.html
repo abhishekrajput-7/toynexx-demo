@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TOYNEXX | Product</title>
+
+    <!-- Existing Website CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Product Page CSS -->
+    <link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+
+    <!-- Product Page Start -->
+
+    <main id="product-page">
+
+<section class="product-container">
+
+    <!-- LEFT SIDE -->
+
+    <div class="product-gallery">
+
+        <div class="thumbnail-gallery" id="thumbnailGallery">
+            <!-- JS Images -->
+        </div>
+
+        <div class="main-image">
+
+         <span class="product-badge" id="productBadge">
+            🔥 Limited Edition
+            </span>
+
+            <img id="mainProductImage"
+                 src=""
+                 alt="Product Image">
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="product-details">
+
+        <span class="product-category">
+            TOYNEXX EXCLUSIVE
+        </span>
+
+        <h1 id="productName">
+            Loading...
+        </h1>
+
+    <div class="product-rating">
+
+         <div class="stars" id="productStars">
+             ⭐⭐⭐⭐⭐
+         </div>
+
+         <span class="rating-text" id="ratingText">
+           5.0 • 0 Reviews
+         </span>
+
+          </div>
+
+        <div class="price-wrapper">
+
+            <div class="current-price"
+                 id="productPrice">
+                ₹0
+            </div>
+
+          <div class="old-price" id="oldPrice">
+                 ₹0
+            </div>
+
+           <div class="discount" id="discount">
+                 38% OFF
+            </div>
+
+        </div>
+
+        <p class="product-description"
+           id="productDescription">
+
+            Loading description...
+
+        </p>
+
+        <div class="feature-list">
+
+            <div class="feature-item">
+                ✅ Official Licensed Product
+            </div>
+
+            <div class="feature-item">
+                🚚 Free Shipping Across India
+            </div>
+
+            <div class="feature-item">
+                🔒 Secure Payments
+            </div>
+
+            <div class="feature-item">
+                📦 Premium Packaging
+            </div>
+
+        </div>
+
+          <div class="stock-box">
+
+        <span class="stock-dot"></span>
+
+        <span id="stockText">
+        In Stock
+         </span>
+
+       </div>
+
+        <div class="quantity-box">
+
+            <button class="qty-btn"
+                    id="minusQty">
+                −
+            </button>
+
+            <input
+                type="text"
+                value="1"
+                id="qtyInput"
+                readonly>
+
+            <button class="qty-btn"
+                    id="plusQty">
+                +
+            </button>
+
+        </div>
+
+        <div class="product-buttons">
+
+            <button id="addCartBtn"
+                    class="cart-btn">
+
+                🛒 Add To Cart
+
+            </button>
+
+            <button id="buyNowBtn"
+                    class="buy-btn">
+
+                ⚡ Buy Now
+
+            </button>
+
+        </div>
+
+        <div class="secondary-buttons">
+
+            <button class="wishlist-btn">
+
+                ❤️ Wishlist
+
+            </button>
+
+            <button class="share-btn">
+
+                🔗 Share
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRODUCT DETAILS TABS
+========================= -->
+
+<section class="product-extra">
+
+    <div class="tabs">
+
+        <button class="tab-btn active" data-tab="description">
+            Description
+        </button>
+
+        <button class="tab-btn" data-tab="specification">
+            Specifications
+        </button>
+
+        <button class="tab-btn" data-tab="reviews">
+            Reviews
+        </button>
+
+    </div>
+
+    <div class="tab-content active" id="description">
+
+        <h2>Product Description</h2>
+
+        <p id="longDescription">
+
+            This premium collectible is crafted with exceptional detailing,
+            high-quality materials and an authentic finish.
+            Perfect for anime and superhero collectors.
+
+        </p>
+
+    </div>
+
+    <div class="tab-content" id="specification">
+
+        <h2>Specifications</h2>
+
+        <table class="spec-table">
+
+            <tr>
+                <td>Material</td>
+                <td>PVC Premium</td>
+            </tr>
+
+            <tr>
+                <td>Height</td>
+                <td>28 cm</td>
+            </tr>
+
+            <tr>
+                <td>Weight</td>
+                <td>850 g</td>
+            </tr>
+
+            <tr>
+                <td>Category</td>
+                <td>Anime Collectible</td>
+            </tr>
+
+            <tr>
+                <td>Packaging</td>
+                <td>Premium Collector Box</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="tab-content" id="reviews">
+
+        <h2>Customer Reviews</h2>
+
+        <div class="review-card">
+
+            <h4>⭐⭐⭐⭐⭐ Rahul</h4>
+
+            <p>
+                Amazing quality. Packaging was excellent.
+                Worth every rupee.
+            </p>
+
+        </div>
+
+        <div class="review-card">
+
+            <h4>⭐⭐⭐⭐⭐ Aman</h4>
+
+            <p>
+                Best collectible I've purchased.
+                Highly recommended.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RELATED PRODUCTS
+========================= -->
+
+<section class="related-section">
+
+    <div class="section-title">
+
+        <h2>You May Also Like</h2>
+
+        <p>
+            Explore more premium collectibles from TOYNEXX
+        </p>
+
+    </div>
+
+    <div class="related-grid" id="relatedProducts">
+
+        <!-- JS PRODUCTS -->
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RECENTLY VIEWED
+========================= -->
+
+<section class="recent-section">
+
+    <div class="section-title">
+
+        <h2>Recently Viewed</h2>
+
+    </div>
+
+    <div class="recent-grid" id="recentProducts">
+
+        <!-- JS -->
+
+    </div>
+
+</section>
+
+
+    </main>
+
+    <!-- Product Page End -->
+
+
+    <!-- Product JS -->
+
+  <script src="js/products.js"></script>
+
+  <script src="js/product.js"></script>
+
+</body>
+
+</html>
